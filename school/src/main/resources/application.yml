@@ -1,0 +1,32 @@
+# Note commented properties are not required
+# because it configured in config-server service
+
+#eureka:
+#  instance:
+#    hostname: localhost
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8040/eureka
+#
+#server:
+#  port: 8062
+
+spring:
+  application:
+    name: schools
+  config:
+    import: optional:configserver:http://localhost:8888
+#  datasource:
+#    driver-class-name: org.postgresql.Driver
+#    url: jdbc:postgresql://localhost:5432/school
+#    username: postgres
+#    password: password
+#  jpa:
+#    hibernate:
+#      ddl-auto: create
+#    database: postgresql
+#    database-platform: org.hibernate.dialect.PostgreSQLDialect
+#
+#application:
+#  config:
+#    student-url: http://localhost:8061/student/v1/api
